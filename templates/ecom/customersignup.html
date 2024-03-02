@@ -153,7 +153,7 @@ a.socialIcon:hover,
             <div class="card">
                 <form class="box" method="post" enctype="multipart/form-data">
                   {% csrf_token %}
-                    <h1>Customer Sign Up</h1>
+                    <h1>Customer Register</h1>
                     
                       {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
                         {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
