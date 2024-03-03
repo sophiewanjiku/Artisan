@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Lorraine\Documents\Artisan\venv
+set VIRTUAL_ENV=C:\Users\TEST\Downloads\ECommerceSite-Django\ECommerceSite-Django\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
