@@ -22,7 +22,13 @@
   cursor: pointer;
   margin: 5px;
 }
-
+.purchase{
+  background-color: #317873 ;
+  color: white;
+}
+.total{
+  background-color: #F4E8C1;
+}
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -59,9 +65,11 @@
   color: white;
 }
 .panel-title{
-  color: #410F13;
+  color: black;
 }
-
+.panel-heading{
+  background-color: #E1A87A !important;
+}
 </style>
 
 </head>
@@ -108,8 +116,8 @@ written By : sumit kumar
 </div>
 <br><br><br>
 <div style="text-align: center;">
-  <button class="btn btn-danger btn-lg">Total ${{total}}</button>
-  <a href="/customer-address"><button class="btn btn-success btn-lg" ><span>Purchase </span></button></a>
+  <button class="btn total btn-lg">Total ${{total}}</button>
+  <a href="/customer-address"><button class="btn purchase btn-lg" ><span>Purchase </span></button></a>
 </div>
 
 
