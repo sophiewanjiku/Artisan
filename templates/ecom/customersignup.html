@@ -3,46 +3,75 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Simple E-commerce</title>
-
-
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Artisan Alley</title>
+    {% load static %}
+    
     <style media="screen">
-      body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+
+body {
+margin: 0;
+ padding: 0;
+font-family: 'League Gothic';
+background-color: #410F13;
+box-sizing: border-box;
     /* background: linear-gradient(to right, #b92b27, #1565c0) */
 }
+section{
+    width: 30%;
+    height: 610px;
+    margin-top: 100px;
+    border-radius: 10px;
+    background-image: url("{% static 'images/back6.jpg' %}");
+    position: relative;
+    left: 5px;
+    mix-blend-mode: soft-light;
+    opacity: 0.6;
+    background-image: contain;
+    background-position: 50% 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register{
+    font-family: 'Luckiest Guy';
+    color: black !important;
+    font-size: 17px;
+}
 .box {
-    width: 100%;
+    width: 40%;
     padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #3E454C;
+    background: white;
     text-align: center;
     transition: 0.25s;
     margin-top: 100px;
-    border-radius: 50px;
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .box input[type="text"],
 .box input[type="password"] {
-    border: 0;
+    border: 2px solid #C68663;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #ffffff;
     padding: 10px 10px;
     width: 250px;
     outline: none;
     color: white;
-    border-radius: 24px;
-    transition: 0.25s
+    border-radius: 10px;
+    transition: 0.25s;
+    font-size: 15px;
+    font-family: 'League Gothic';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .box h1 {
@@ -63,17 +92,18 @@
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #2ecc71;
+    background: #E1A87A;
     padding: 14px 40px;
     outline: none;
-    color: white;
+    color: black;
     border-radius: 24px;
     transition: 0.25s;
-    cursor: pointer
+    cursor: pointer;
+    font-family: 'Luckiest Guy';
 }
 
 .box input[type="submit"]:hover {
-    background: #2ecc71
+    background: #C68663;
 }
 
 .forgot {
@@ -146,14 +176,16 @@ a.socialIcon:hover,
     </style>
   </head>
   <body>
-    {% include "ecom/navbar.html" %}
     <div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
+                <section>
+                  
+                </section>
                 <form class="box" method="post" enctype="multipart/form-data">
                   {% csrf_token %}
-                    <h1>Customer Register</h1>
+                    <h1 class="register">Customer Register</h1>
                     
                       {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
                         {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
@@ -163,18 +195,13 @@ a.socialIcon:hover,
                                 {% render_field customerForm.mobile class="form-control" placeholder="Contact" %}
                                   {% render_field customerForm.profile_pic class="form-control" placeholder="Profile pic" %}
                   
-                     <input type="submit" name="" value="Create">
+                    <input type="submit" name="" value="Create">
 
                 </form>
             </div>
         </div>
     </div>
-</div>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
-{% include "ecom/footer.html" %}
+    </div>
+
   </body>
 </html>
