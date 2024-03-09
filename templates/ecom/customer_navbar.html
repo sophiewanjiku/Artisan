@@ -12,17 +12,26 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
 
+  {% load static %}
   <style>
   body {
     background-color: #f7f7f7;
   }
 
   #navbar {
-    background-color: #3e454c;
+    background-color: #410F13;
     color: black;
+    font-family: 'League Gothic';
 }
-
+.col-sm-3{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
   .row1 {
       padding-top: 10px;
       padding-right: 50px
@@ -41,8 +50,8 @@
   }
 
   .navbar-button {
-      background-color: #e5bc41;
-      border: 1px solid #e5bc41;
+      background-color: #E1A87A;
+      border: 1px solid #E1A87A;
       border-radius: 0 2px 2px 0;
       color: #565656;
       padding: 10px 0;
@@ -162,7 +171,8 @@
   }
 
   .largenav {
-      display: none
+      display: none;
+      font-family: 'League Gothic';
   }
 
   .smallnav {
@@ -173,6 +183,13 @@
       margin-left: 15px;
       margin-top: 15px
   }
+
+  .logo{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: 0;
+}
 
   .menu {
       cursor: pointer
@@ -210,8 +227,9 @@
             </div>
             <div class="row row2">
                 <div class="col-sm-3">
-                    <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">Simple Ecommerce </span></a></h2>
-                </div>
+                    <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">ARTISAN 
+                        <img src="{% static 'images/logo.png' %}" class="logo">
+                        ALLEY </span></a></h2>                </div>
 
 
                 <div class="navbar-search smallsearch col-sm-7 col-xs-11">

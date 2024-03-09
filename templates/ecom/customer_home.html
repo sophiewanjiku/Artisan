@@ -2,9 +2,7 @@
 {% load static %}
 {% block content %}
 
-
-
-  <style media="screen">
+<style media="screen">
     body,
 html {
   height: 100%;
@@ -33,7 +31,8 @@ html {
 }
 
 body {
-  background-color:#f7f7f7;
+  background-color:#410F13;
+  overflow-x: hidden; 
 }
 
 .page-wrapper {
@@ -347,7 +346,7 @@ img {
   border-radius: 50px;
   margin: 0 .2em 1em;
   &:hover {
-    background: red;
+    background: #410F13;
   }
 }
 
@@ -359,9 +358,10 @@ img {
   left: 100%;
   z-index: 10;
   padding: 8em 1em 0;
-  background-size: cover;
-  background-position: 50% 50%;
+  background-size:cover;
+  background-position: 100%;
   transition: left 0s .75s;
+  mix-blend-mode: hard-light;
 }
 
 [id^="slide"]:checked + .slide {
@@ -371,17 +371,18 @@ img {
 }
 
 .slide-1 {
-  background-image: url("{% static 'images/ecom-banner1.jpg' %}");
+  background-image: url("{% static 'images/back1.jpg' %}");
 }
 .slide-2 {
-  background-image: url("{% static 'images/ecom-banner4.jpg' %}");
+  background-image: url("{% static 'images/back2.jpg' %}");
 }
 .slide-3 {
-  background-image: url("{% static 'images/ecom-banner1.png' %}");
+  background-image: url("{% static 'images/back3.jpg' %}");
 }
 .slide-4 {
-  background-image: url("{% static 'images/ecom-banner3.jpg' %}");
+  background-image: url("{% static 'images/back4.jpg' %}");
 }
+
   </style>
 
 <div class="row">
@@ -464,7 +465,7 @@ img {
 
 
 {%else%}
-<h3 style="text-align:center; color:#3E454C;">No Search Found</h3>
+<h3 style="text-align:center; color:white;">No Search Found</h3>
 {%endif%}
 
 <script>
