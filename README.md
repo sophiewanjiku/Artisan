@@ -14,7 +14,7 @@ Messaging System: Communicate directly with customers to answer questions and ha
 
 Reviews and Ratings: Receive feedback from customers to build trust and credibility.
 
-Getting Started
+start
 
 To get started with Artisan Alley, follow these steps:
 
