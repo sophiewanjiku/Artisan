@@ -27,7 +27,8 @@ To get started with Artisan Alley, follow these steps:
   cd artisan-alley
   
   pip install -r requirements.txt
-  
+
+  pip install django
 3. Set Up Database: Configure your preferred database settings in the Django settings file (settings.py) and migrate the database.
    
   python manage.py makemigrations
